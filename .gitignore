@@ -1,0 +1,34 @@
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+build/
+dist/
+**/build/
+**/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Testing
+coverage/
+**/coverage/
+
+# VSCode and IDEs
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+
+# Package manager files
+.pnp
+.pnp.js
