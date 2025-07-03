@@ -76,8 +76,8 @@ const styles = {
     border: "none",
     borderRadius: "6px",
     cursor: "pointer",
-    width: "auto", // ← esto evita que se expanda a 100%
-    display: "inline-block", // ← asegura que no se estire como bloque
+    width: "auto", 
+    display: "inline-block", 
   },
 };
 

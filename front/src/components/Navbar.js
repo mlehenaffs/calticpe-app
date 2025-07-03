@@ -6,7 +6,7 @@ function Navbar() {
 
   return (
     <nav style={styles.nav}>
-      <h3 style={styles.title}>CalticPE</h3>
+      <h3 style={styles.title}>Caltic Planeación Estratégica</h3>
       {user && (
         <div style={styles.links}>
           {user.role === "consultant" && (

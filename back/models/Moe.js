@@ -14,7 +14,7 @@ const moeSchema = new mongoose.Schema({
         x: { type: Number, required: true },
         y: { type: Number, required: true },
       },
-      connections: [{ type: String }], // IDs of connected nodes
+      connections: [{ type: String }], 
     },
   ],
 });

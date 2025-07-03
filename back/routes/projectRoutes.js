@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
   try {
     const projects = await Project.find()
       .populate("client")
-      .populate("accessUsers", "name email"); // Solo incluir nombre y correo
+      .populate("accessUsers", "name email"); 
     res.json(projects);
   } catch (error) {
     console.error("Error al obtener proyectos:", error.message);

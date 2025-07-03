@@ -1,7 +1,6 @@
 const Moe = require("../models/Moe");
 
 // Crear un nuevo MOE
-// moeController.js
 const createMoe = async (req, res) => {
   try {
     const existing = await Moe.findOne({ projectId: req.body.projectId });
