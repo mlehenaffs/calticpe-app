@@ -1,7 +1,8 @@
+// App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
-import Navbar from "./components/Navbar";
+import Layout from "./components/Layout";
 
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
@@ -13,23 +14,69 @@ import Users from "./pages/Users";
 import PrivateRoute from "./components/PrivateRoute";
 import MoeBuilder from "./pages/MoeBuilder";
 
-
-
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-          <Route path="/clients" element={<PrivateRoute><Clients /></PrivateRoute>} />
-          <Route path="/projects" element={<PrivateRoute><Projects /></PrivateRoute>} />
-          <Route path="/projects/:id" element={<ProjectForm />} />
-          <Route path="/formats" element={<PrivateRoute><Formats /></PrivateRoute>} />
-          <Route path="/users" element={<PrivateRoute><Users /></PrivateRoute>} />
-          <Route path="/moe-builder" element={<MoeBuilder projectId="686350095b2ccf322e557dfb" />} />
 
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <Layout><Dashboard /></Layout>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/clients"
+            element={
+              <PrivateRoute>
+                <Layout><Clients /></Layout>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/projects"
+            element={
+              <PrivateRoute>
+                <Layout><Projects /></Layout>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/projects/:id"
+            element={
+              <PrivateRoute>
+                <Layout><ProjectForm /></Layout>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/formats"
+            element={
+              <PrivateRoute>
+                <Layout><Formats /></Layout>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/users"
+            element={
+              <PrivateRoute>
+                <Layout><Users /></Layout>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/moe-builder"
+            element={
+              <PrivateRoute>
+                <Layout><MoeBuilder projectId="686350095b2ccf322e557dfb" /></Layout>
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </Router>
     </AuthProvider>
@@ -37,3 +84,4 @@ function App() {
 }
 
 export default App;
+
